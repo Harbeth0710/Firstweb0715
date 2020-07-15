@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" charset="UTF-8">
+<title>自我介绍part</title>
+<meta name="title" content="个人网页">
+<style type="text/css">
+  .body {
+    background: url(img/bgm2.jpg) no-repeat center fixed;
+    background-size: cover;
+  }
+  #wrapper {
+    width-max: 100%;
+    height: 100%;
+  }
+  .img1{
+    float: right;
+    width:150px;
+    margin: 20px;
+  }
+  .img2{
+    width:250px;
+    margin: 10px 100px;
+    float: left;
+  }
+  .word1 {
+    color:white;
+    text-align: right;
+    line-height: 1.5;
+    text-shadow: 2px 1px blue;
+    padding-right: 25px;
+  }
+  .head1 {
+    color:white;
+    text-align: right;
+    line-height: 1.5;
+    text-shadow: 2px 1px blue;
+    padding-right: 10px
+  }
+  .table1{
+    text-align: right;
+    font-size: 18px;
+    color: white;
+    width: 150px;
+    line-height:2;
+    display: inline-block;
+    padding-left:25px;
+    margin: 20px
+  }
+  .table2{
+    text-align: left;
+    font-size: 18px;
+    color: white;
+    width: 200px;
+    line-height:2;
+    display: inline-block;
+    margin: 20px
+  }
+  .div1{
+    float: right;
+    margin-right: 200px;
+  }
+  button{
+    border: 5px double pink;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    color: tomato;
+    margin: 50px 145px;
+  }
+  ul{
+    list-style-type: none;
+    overflow: hidden;
+    color: pink;
+    font-weight: bold;
+    display: inline-block;
+     }
+    li{
+    float: left;
+    display:table-cell;
+    font-size: 20px
+    }
+    li a{
+    text-decoration: none;
+    display: block;
+    color: pink;
+    text-align: center;
+    padding: 10px 40px;
+    }
+    li a:hover{
+    color: white;
+    font-size: 25px;
+    }
+</style>
+</head>
+
+<body class="body">
+<div id="wrapper">
+  <div>
+    <img src="img/banner.jpg" class="img1">
+  </div><br>
+  <p id="clock" class="word1"></p>
+  <h3 class="head1">总之岁月漫长，然而值得等待</h3>
+</div><br><br><br><br>
+
+ <table class="table1">
+    <tr><td><img src="img/head.jpg" class="img2"></td></tr>
+</table>
+<div class="div1">
+<table class="table1">
+    <tr><td>Name:<br>Birth:<br>Location:<br>Adress:<br>E-mail:<br>Skill:<br>Favorite:</td></tr>
+</table>
+<table class="table2">
+    <tr><td>吕龙雨<br>2000/07/10<br>山东省青岛市<br>杭州电子科技大学<br>lly61767109maili@163.com<br>Premire &nbsp Photoshop &nbsp Piano<br>吃！&nbsp Music!</td></tr>
+</table></div><br><br>
+
+<a href="https://m.weibo.cn/u/5623279365?from=10A6395010&wm=9006_2001&sourceType=qq&uid=5623279365" target="_blank">
+<button>One touch to My Weibo</button>
+</a><br><br>
+
+<div style="display:table; margin:0 auto;bottom: 20px;">
+  <ul>
+    <li><a href="main.html" target="_blank">- 首页 -</a></li>
+    <li><a href="hobby.html" target="_blank">- 爱好特长 -</a></li>
+    <li><a href="exp.html" target="_blank">- 经历小记 -</a></li>
+    <li><a href="contact.html" target="_blank">- 联系我哦 -</a></li>
+  </ul>
+</div>
+
+<script>
+var days=["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+function goTime(){
+    var time = new Date();
+    var month = time.getMonth()+1;//返回0-11,所以+1
+    var date = time.getDate();
+    var day = time.getDay();
+    var hour = time.getHours();
+    var minute = time.getMinutes();
+    var str = month+"月"+date+"日"+days[day];
+    str += hour+"点"+minute+"分";
+    window.clock.innerHTML = str;
+}
+window.onload=function(){
+    window.clock=document.getElementById("clock");
+    window.setInterval("goTime()",1000);
+}
+</script>
+</body>
+</html>
