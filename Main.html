@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" charset="UTF-8">
+<title>小小世界</title>
+<meta name="title" content="个人网页">
+<style type="text/css">
+	.body {
+		background: url(img/bgm1.jpg) no-repeat center fixed;
+		background-size: cover;
+	}
+	#wrapper {
+		width-max: 100%;
+		height: 100%;
+	}
+	.img1{
+		float: right;
+		width:180px;
+		margin: 20px;
+	}
+	.word1 {
+		color:white;
+		text-align: right;
+		line-height: 1.5;
+		text-shadow: 2px 1px blue;
+		padding-right: 25px;
+	}
+	.head1 {
+		color:white;
+		text-align: center;
+		line-height: 5;
+		text-shadow: 2px 1px pink;
+		margin: 150px;
+		letter-spacing: 3px;
+	}
+	.head2 {
+		color:white;
+		text-align: center;
+		line-height: 3;
+		text-shadow: 1px 1px pink;
+		letter-spacing: 2px;
+	}
+	.contents {
+		height:100%;
+		padding-bottom:25px; 
+		padding-left:40px;
+		padding-top:10px; 
+	}
+	ul{
+    list-style-type: none;
+    overflow: hidden;
+    color: pink;
+    font-weight: bold;
+    display: inline-block;
+     }
+    li{
+    float: left;
+    display:table-cell;
+    font-size: 20px
+    }
+    li a{
+    text-decoration: none;
+    display: block;
+    color: pink;
+    text-align: center;
+    padding: 10px 40px;
+    }
+    li a:hover{
+    color: white;
+    font-size: 25px;
+    }
+</style>
+</head>
+
+<body class="body">
+<div id="wrapper">
+	<div class="contents">
+	<div><img src="img/banner.jpg" class="img1"></div><br>
+    <p class="word1">欢迎来到<br/>Lyu Longyu 的小小世界</p>
+    <p id="clock" class="word1"></p>
+	<h2 class="head1">总之岁月漫长，然而值得等待</h2>
+	<h3 class="head2">
+微博朋友圈抽奖职业陪跑选手<br>熬夜秃头选拔赛环球形象大使<br>著名电影电视剧综艺常驻观众<br>中央戏精学院年度优秀毕业生<br>双下巴吉我斯纪录常年保持者<br>熬夜秃头选拔赛环球形象大使<br>天天立flag天天倒旗大魔王<br>德智体美劳全面不发展代表<br>
+知名做白日梦研究专家<br>个人才艺表演:说废话<br>没有感情的转发机器<br>贫困大赛形象代言人<br>互联网冲浪金牌选手<br>
+某不知名气人选手<br>宇宙一级潜在鸽王<br>超长反射弧达人<br>逢考必失眠选手<br>黑眼圈未来之星<br>
+</h3>
+ </div>  <br><br><br><br>  <br><br><br><br>
+
+<div style="display:table; margin:0 auto;bottom: 20px;">
+  <ul>
+    <li><a href="PROFILE.html" target="_blank">- 个人介绍 -</a></li>
+    <li><a href="hobby.html" target="_blank">- 爱好特长 -</a></li>
+    <li><a href="exp.html" target="_blank">- 经历小记 -</a></li>
+    <li><a href="contact.html" target="_blank">- 联系我哦 -</a></li>
+  </ul>
+</div>
+</div>
+<script>
+var days=["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+function goTime(){
+    var time = new Date();
+    var month = time.getMonth()+1;//返回0-11,所以+1
+    var date = time.getDate();
+    var day = time.getDay();
+    var hour = time.getHours();
+    var minute = time.getMinutes();
+    var str = month+"月"+date+"日"+days[day];
+    str += hour+"点"+minute+"分";
+    window.clock.innerHTML = str;
+}
+window.onload=function(){
+    window.clock=document.getElementById("clock");
+    window.setInterval("goTime()",1000);
+}
+</script>
+</body>
+</html>
