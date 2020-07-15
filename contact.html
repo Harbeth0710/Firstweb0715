@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" charset="UTF-8">
+<title>contact</title>
+<meta name="title" content="个人网页">
+<style type="text/css">
+  body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+  .body {
+    background: url(img/bgm1.jpg) no-repeat center fixed;
+    background-size: 100% 100%;
+  }
+  .head1 {
+    color:white;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 1px 1px pink;
+    padding-right: 10px
+  }
+  ul{
+    list-style-type: none;
+    overflow: hidden;
+    color: pink;
+    font-weight: bold;
+    display: inline-block;
+  }
+  li{
+    float: left;
+    display:table-cell;
+    font-size: 20px
+  }
+  li a{
+    text-decoration: none;
+    display: block;
+    color: pink;
+    text-align: center;
+    padding: 10px 40px;
+  }
+  li a:hover{
+    color: white;
+    font-size: 25px;
+  }
+  form{
+    width: 300px;
+    margin: 20px auto;
+  }
+  #top{
+    width: 300px;
+    margin: 0 auto;
+    color: white;
+  }
+  label{
+    color: white;
+  }
+  input, textarea{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    width: 300px;
+    min-height: 30px;
+    display: block;
+    margin:8px;
+    border-radius: 5px;
+    padding:10px
+  }
+  textarea{
+    min-height: 200px;
+  }
+  input: focus, textarea: focus{
+    box-shadow: 0 0 25px #ccc;
+    transform: scale(1.05);
+  }
+  input: not(: focus), textarea: not(: focus){
+    opacity: 0.5;
+  }
+
+</style>
+</head>
+
+<body class="body">
+  <br><br><br><br>
+  <div id="top">
+    <h2>Let there be light!</h2>
+    <h3>and there was light!</h3>
+    <h4>Email to lly61767109maili@163.com:</h4>
+  </div>
+  <form action="mailto:lly61767109maili@163.com@Domain.com" method="post">
+    <fieldset>
+    <label for="name">留下芳名:</label>
+    <input type="text" name="1" required placeholder="Name" />
+    <label for="email">给个邮箱:</label> 
+    <input type="email" name="1" required placeholder="email@example.com" />
+    <label for="message">写下留言:</label> 
+    <textarea name="1" value='message'required></textarea>
+    <input type="submit" value="发送" class="submit">
+    <input type="reset" value="重置">
+  </fieldset>
+  </form>
+<br><br>
+  <h3 class="head1">总之岁月漫长，然而值得等待</h3>
+<br><br><br><br>
+<div style="display:table; margin:0 auto;">
+  <ul>
+    <li><a href="main.html" target="_blank">- 首页 -</a></li>
+    <li><a href="PROFILE.html" target="_blank">- 个人介绍 -</a></li>
+    <li><a href="hobby.html" target="_blank">- 爱好特长 -</a></li>
+    <li><a href="exp.html" target="_blank">- 经历小记 -</a></li>
+  </ul>
+</div>
+</div>
+</body>
+</head>
+</html>
